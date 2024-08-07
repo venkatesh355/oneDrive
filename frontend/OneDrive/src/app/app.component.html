@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Upload File to One Drive</h1>
+
+<div style="display: flex; justify-content: center;">
+  <mat-card style="width: 400px; padding: 20px;">
+    <form (ngSubmit)="onSubmit()">
+        <input  type="text"  name="folderName" [(ngModel)]="folderName" required placeholder="Enter Folder Name"/>
+
+      <div>
+        <label for="fileInput">Select Files</label>
+        <input type="file" id="fileInput" name="file" (change)="selectedFile($event)" multiple #fileInput required />
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <button mat-raised-button color="primary" type="submit">Upload</button>
+      </div>
+    </form>
+  </mat-card>
+</div>
